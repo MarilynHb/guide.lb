@@ -28,7 +28,7 @@
 
       var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
-      if (scrollTop > 100) {
+      if (scrollTop > 20) {
         mainNav.classList.add("navbar-shrink");
       } else {
         mainNav.classList.remove("navbar-shrink");
@@ -39,5 +39,15 @@
     // Collapse the navbar when page is scrolled
     document.addEventListener("scroll", collapseNavbar);
   }
+   
 
 })(); // End of use strict
+            var user_name = document.getElementById("fname");
+            document.getElementById("btn-alert").addEventListener("click", function(){
+                var value=user_name.value.trim();
+                if(!value)
+                    alert("Name Cannot be empty!");
+                else
+                    alert("Hello, " + value + "!\nGreetings From GeeksforGeeks.");
+            });
+    
