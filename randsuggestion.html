@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta user-scalable=0>
+    <title>Home - Guide.LB</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    
+    <script type="text/javascript">
+
+        function generateRandomPlace() {
+        var placeImg = [ "assets/img/resto1.jfif","assets/img/resto2.jfif", "assets/img/resto3.jfif",
+                      "assets/img/guest1.jfif", "assets/img/guest2.jfif", "assets/img/guest3.jfif",
+                      "assets/img/bar1.jfif", "assets/img/bar2.jfif" , "assets/img/bar3.jfif",
+                      "assets/img/coffee1.jfif", "assets/img/coffee2.jfif", "assets/img/coffee3.jfif",
+                      "assets/img/beach1.jfif", "assets/img/beach2.jfif", "assets/img/beach3.jfif",
+                      "assets/img/rooftop1.jfif", "assets/img/rooftop2.jfif", "assets/img/rooftop3.jfif"];
+        
+        var placeTitle = ["SERAY 🚏 DOWNTOWN", "BARON 📍 MAR MIKHAEL", "LOLA WINTER EDITION 📍 BIKFAYA",
+                            "LA MAISON DE LA FORÊT 📍 BKASSINE", "CASA DE THOUM WINTER EDITION 📍 THOUM", "BEIT NOHA 📍 ANFEH",
+                          "ANALOGUE 📍 MONOT", "AMELIA 📍 MAR MIKHAEL","CYRANO 📍 GEMMAYZE",
+                        "BEYT 📍 MAR MIKHAEL", "KALEI 📍HAMRA" , "BACKBURNER 📍 SAIFI VILLAGE",
+                         "JAMMAL📍 BATROUN", "PIERRE AND FRIENDS 📍 THOUM", "KEMPINSKI 📍SUMMERLAND",
+                         "ALBERGO 📍 MONOT", "O MONOT ROOFTOP 📍ACHRAFIEH", "CLAP 📍BEIRUT"];
+            
+    
+        var index = Math.floor(Math.random()*placeImg.length);
+        var img = placeImg[index];
+        //document.write('<img class="rev-pics" src="'+img+'" />');
+        var shownimg = document.getElementById("randompic");
+        randompic.src = img;
+        var moreinfo = document.getElementById("more-info");
+        
+        document.getElementById("rand-title").innerHTML = placeTitle[index];
+        if( index <=2 ){
+        moreinfo.setAttribute('href', 'restaurants.html#' + index);
+        }
+        else if (index > 2 && index <= 5){
+        moreinfo.setAttribute('href', 'guesthouses.html#' + index);
+        }
+        else if (index >5 && index <= 8){
+        moreinfo.setAttribute('href', 'bars.html#' + index);
+        }
+        else if (index >8  && index <= 11){
+        moreinfo.setAttribute('href', 'cafes.html#' + index);
+        }
+        else if (index >11  && index <= 14){
+        moreinfo.setAttribute('href', 'beaches.html#' + index);
+        }
+        else if (index >14  && index <= 17){
+        moreinfo.setAttribute('href', 'rooftops.html#' + index);
+        }
+
+        }
+        </script>
+    
+</head>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
+    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#">Guide Lebanon</a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item nav-link"><a class="nav-link active" href="index.html#about">About</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="index.html#download">Reviews</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="randsuggestion.html">SMS!</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="text-center content-section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 mx-auto row ">
+                    <h2>Suggest Me Something!</h2>
+                    <br><br>
+                    <div class="col-lg-5 columnR" style="text-align: center;">
+                    <ul style="list-style-type : none; text-align: left;">
+                        <br><br><br>
+                        <li><label><input type="checkbox" id="check-resto" name="Restaurants" value="Restaurants"> Restaurants  </label></li>
+                        <li><label><input type="checkbox" id="check-guest">     Guesthouses</label></li>
+                        <li><label><input type="checkbox" id="check-bars">     Bars</label></li>
+                        <li><label><input type="checkbox" id="check-cafes">     Cafes</label></li>
+                        <li><label><input type="checkbox" id="check-beaches">     Beaches</label></li>
+                        <li><label><input type="checkbox" id="check-rooftops">     Rooftops</label></li>
+                    </ul>
+                    <br><br>
+                    <button onclick="generateRandomPlace()">Random Place</button> <br><br><br>
+                    <h4 id="rand-title"></h4>
+                    <a id="more-info" href=""><p>MORE INFO</p></a>
+                    </div>
+                    <div id="randomPlaceResult" class="col-lg-3 ">
+                        <img src="blank.png" id="randompic" class="rev-pics">
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <footer>
+        <div class="container text-center">
+            <a class="list-inline banner-social-buttons">
+                <a href="https://www.instagram.com/guide.lb/" target="blank"><li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button"><i ></i><span class="network-name">Instagram</span></button></li></a>
+                <a href="https://www.youtube.com/channel/UCUJ1n1prTzgnAP2yHXLVH6A/featured" target="blank"><li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button"><i ></i><span class="network-name">Youtube</span></button></li></a>
+            </ul>
+            <p><br>www.guide.lb.com<br>CopyRight 2022 All Rights Reserved<br></p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/grayscale.js"></script>
+</body>
+
+</html>
