@@ -78,29 +78,32 @@
     <section class="text-center content-section" id="about" style="background-color: #f8f9fa;">
         <div class="container" style="background-color: #f8f9fa; color: #4e392f;">
             <div class="row">
-                <div class="col-lg-7 mx-auto row ">
+                <div class="col-lg-12 mx-auto row ">
                     <h2>Suggest Me Something!</h2>
                     <br><br>
-                    <div class="col-lg-5 columnR" style="text-align: center;">
-                    <ul style="list-style-type : none; text-align: left;">
+                    <div id="randomPlaceResult" class="col-lg-7 ">
+                        <img src="/assets/img/blank.jpg" id="randompic" class="" style="object-fit:cover; width: 80%; height: 90%;">
+                    </div>
+                    <div class="col-lg-4" style="text-align: center;">
                         <br><br><br>
-                        <li><label><input type="checkbox" id="check-resto" name="Restaurants" value="Restaurants"> Restaurants  </label></li>
-                        <li><label><input type="checkbox" id="check-guest">     Guesthouses</label></li>
-                        <li><label><input type="checkbox" id="check-bars">     Bars</label></li>
-                        <li><label><input type="checkbox" id="check-cafes">     Cafes</label></li>
-                        <li><label><input type="checkbox" id="check-beaches">     Beaches</label></li>
-                        <li><label><input type="checkbox" id="check-rooftops">     Rooftops</label></li>
-                    </ul>
+                        <button onclick="generateRandomPlace()" class="btn btn-primary" type="button">Random Place</button> <br><br><br>
+                        <ul style="list-style-type : none; text-align: left;" class="mx-auto">
+                            <br>
+                            <li><i><b>Filter Suggestion</b></i></li>
+                            <li><label><input type="checkbox" id="check-resto" name="Restaurants" value="Restaurants"> Restaurants  </label></li>
+                            <li><label><input type="checkbox" id="check-guest">     Guesthouses</label></li>
+                            <li><label><input type="checkbox" id="check-bars">     Bars</label></li>
+                            <li><label><input type="checkbox" id="check-cafes">     Cafes</label></li>
+                            <li><label><input type="checkbox" id="check-beaches">     Beaches</label></li>
+                            <li><label><input type="checkbox" id="check-rooftops">     Rooftops</label></li>
+                        </ul>
+                        <br><br>
+                        <a id="more-info" href=""> <h4 id="rand-title"></h4></a>
+                    </div>
+                    
                     <br><br>
-                    <button onclick="generateRandomPlace()" class="btn btn-primary" type="button">Random Place</button> <br><br><br>
-                   
-                    <a id="more-info" href=""> <h4 id="rand-title"></h4></a>
                     </div>
-                    <div id="randomPlaceResult" class="col-lg-3 ">
-                        <img src="/assets/img/blank.jpg" id="randompic" class="rev-pics">
-                        
-
-                    </div>
+                    
                 </div>
             </div>
         </div>
