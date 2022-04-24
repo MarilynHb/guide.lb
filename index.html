@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <script>
+        function messageSent(){
+            var name = document.getElementById("fname").value;
+            var subject = document.getElementById("subject").value;
+            var sent = document.getElementById("submitted-message");
+            sent.innerHTML = "Dear,<b><i> "+ name + "</b></i><br>your message concerning the followed subject <br> <b>" + subject + "</b><br> has been sent!\n";
+        }
+    </script>
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
@@ -120,7 +128,10 @@
                         </div>
                         <div style="padding: 1rem;"></div>
                         <div class="col-md-12">
-                            <input type="submit" value="Send Message" class="btn btn-primary" onclick="messageSent()">
+                            <input type="button" value="Send Message" class="btn btn-primary" onclick="messageSent()">
+                            <br><br>
+                            <p id="submitted-message" style="color: #4E392F;"></p>
+                            <input type="submit" value="Write Another Message" class="btn btn-primary">
                         </div>
                     </form>
                 </div>
