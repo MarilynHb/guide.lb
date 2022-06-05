@@ -22,10 +22,10 @@
     padding-bottom: 40px;
 }
 
-#title0, #title1, #title2, #title3,#title4,#title5,#title6,#title7,#title8,#title9,#title10,#title11,#title12,#title13,#title14,#title15,#title16,#title17,#title18{
+#title0, #title1, #title2, #title3,#title4,#title5,#title6,#title7,#title8,#title9,#title10,#title11,#title12,#title13,#title14,#title15,#title16,#title17,#title18, #rand-title{
     color: #4E392F;
 }
-#title0:hover, #title1:hover, #title2:hover, #title3:hover,#title4:hover,#title5:hover,#title6:hover,#title7:hover,#title8:hover,#title9:hover,#title10:hover,#title11:hover,#title12:hover,#title13:hover,#title14:hover,#title15:hover,#title16:hover,#title17:hover,#title18:hover{
+#title0:hover, #title1:hover, #title2:hover, #title3:hover,#title4:hover,#title5:hover,#title6:hover,#title7:hover,#title8:hover,#title9:hover,#title10:hover,#title11:hover,#title12:hover,#title13:hover,#title14:hover,#title15:hover,#title16:hover,#title17:hover,#title18:hover, #rand-title:hover{
     color: #B19D92;
     text-decoration:underline;
     transition: all ease-in-out .2s;
